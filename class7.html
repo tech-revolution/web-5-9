@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .container{
+            width: 300px;
+            height: 300px;
+            perspective: 1000px;
+        }
+        .inner-card{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 2s;
+            transform-style: preserve-3d;
+        }
+        .container:hover .inner-card{
+            transform: rotateY(180deg);
+        }
+        .front-card, .back-card{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+        }
+        .back-card{
+            transform: rotateY(180deg);
+        }
+        .img1{
+            background-color: rgb(234, 122, 223, 0.6);
+            width: 300px;
+            height: 300px;
+        }
+        .img2{
+            background-color: rgba(172, 99, 5, 0.6);
+            width: 300px;
+            height: 300px;
+        }
+        .suleman{
+            width: 400px;
+            height: 400px;
+            background-color: rgb(3, 9, 85);
+        }
+        .custom-btn{
+            width: 150px;
+            height: 40px;
+            margin: 60px;
+            color: #fff;
+            font-weight: 600;
+            position: relative;
+            background-color: transparent;
+            cursor: pointer;
+            transition: all 1s ease;
+            z-index: 2;
+        }
+        .btn-1{
+            color: orangered;
+            border: 1px solid orangered;
+            box-shadow: 0 0 5px orangered, 0 0 5px orangered inset;
+            transition: all 1s ease;
+            overflow: hidden;
+        }
+        .btn-1:after{
+            position: absolute;
+            content: " ";
+            z-index: -1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: all 1s ease;
+        }
+        .btn-1:hover{
+            color: black;
+        }
+        .btn-1:hover:after{
+            background: orangered;
+            transform: scale(2) rotate(180deg);
+
+        } */
+         /* Button 2 Start */
+         .custom-btn{
+            width: 150px;
+            height: 40px;
+            margin: 60px;
+            color: #fff;
+            font-weight: 600;
+            position: relative;
+            background-color: transparent;
+            cursor: pointer;
+            transition: all 1s ease;
+            z-index: 2;
+        }
+         .suleman{
+            width: 400px;
+            height: 400px;
+            background-color: rgb(3, 9, 85);
+        }
+         .btn-2{
+            background: orangered;
+            border: none;
+            padding: 0;
+            
+        }
+        .btn-2:hover{
+            background: transparent;
+            color: orangered;
+            
+        }
+        .btn-2:before, .btn-2:after{
+            content: " ";
+            top: 0;
+            right: 0;
+            height: 2px;
+            background: orangered;
+            position: absolute;
+            width: 0;
+            box-shadow: 0 0 5px orangered, 0 0 5px orangered inset;
+            transition: all 1s ease;
+        }
+        .btn-2:after{
+            right: inherit;
+            top:inherit;
+            left: 0;
+            bottom: 0;
+        }
+        .btn-2:hover:before, .btn-2:hover:after{
+            width: 100%;
+            transition: 3s ease all;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Hello</h1>
+    <!-- <div class="container">
+        <div class="inner-card">
+            <div class="front-card">
+                <div class="img1"></div>
+            </div>
+            <div class="back-card">
+                <div class="img2"></div>
+            </div>
+        </div>
+    </div> -->
+    <div class="suleman">
+        <button class="custom-btn btn-1">Login</button>
+        <button class="custom-btn btn-2">Sign Up</button>
+    </div>
+
+</body>
+</html>

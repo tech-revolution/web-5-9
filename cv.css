@@ -1,0 +1,26 @@
+.container{
+    width: 70%;
+    border: 1px solid;
+    margin: auto;
+    margin-top: 30px;
+    padding: 10px;
+    height: 700px;
+}
+hr{
+    height: 10px;
+    background-color: purple;
+    margin: 20px 0px 30px 0px;
+}
+.edu{
+    width: 40%;
+    float: left;
+    height: 450px;
+    margin-left: 67px;
+    border-right: 2px solid;
+
+}
+.work{
+    width: 50%;
+    float: left;
+    height: 450px;
+}

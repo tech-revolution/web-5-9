@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        /* .container{
+            background-color: red;
+            height: 400px;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: 200px 400px;
+            justify-content: space-evenly;
+            align-items:center;
+            grid-template-areas: 'header header header header header header'
+            'sidebar sidebar menu menu menu menu''sidebar sidebar menu menu menu menu' 'sidebar sidebar content content extracontent extracontent' 'footer footer footer footer footer footer';
+            grid-gap: 10px 20px;
+            grid-row-gap: 10px;
+
+        } */
+        /* .item{
+            width: 100px;
+            height: 100px;
+            font-size: 30px;
+            background-color: aqua;
+            text-align: center;
+            padding: 30px;
+            border: 1px solid;
+        } */
+        /* .item-1{
+            grid-area: header;
+        }
+        .item-2{
+            grid-area: sidebar;
+        }
+        .item-3{
+            grid-area: menu;
+        }
+        .item-4{
+            grid-area: content;
+        }
+        .item-5{
+            grid-area: extracontent;
+        }
+        .item-6{
+            grid-area: footer;
+        } */
+        .animate{
+
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            animation-name: sample;
+            animation-duration: 5s;
+            position: relative;
+            animation-iteration-count: 2;
+        }
+        @keyframes sample {
+            0%{
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+            25%{
+                background-color: brown;
+                left: 200px;
+                top:0px;
+            }
+            50%{
+                background-color: green;
+                left: 200px;
+                top: 200px;
+            }
+            75%{
+                background-color: blue;
+                left: 0px;
+                top: 200px;
+            }
+            100%{
+                background-color: yellow;
+                left: 0px;
+                top: 0px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- <h1>CSS GRID</h1> -->
+    <!-- <div class="container">
+        <div class="item item-1">   
+            <nav>
+
+            </nav>
+        </div>
+        <div class="item item-2">Sidebar</div>
+        <div class="item item-3">Menu</div>
+        <div class="item item-4">Content</div>
+        <div class="item item-5">Extra Content</div>
+        <div class="item item-6">Footer</div>
+        
+    </div> -->
+    <h2>Animation</ht2>
+        <div class="animate">
+
+        </div>
+</body>
+</html>
