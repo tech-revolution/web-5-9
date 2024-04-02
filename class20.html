@@ -32,12 +32,12 @@
         for (let i=0;i<num;i++){
             for (let j=0;j<num-i
             ; j++){
-                text+= " ";
+                text+= String.fromCharCode(j+65);
                 // console.log("*")
             }
-            for(let k =0; k<i;k++){
-                text+= " *";
-            }
+            // for(let k =0; k<i;k++){
+            //     text+= " *";
+            // }
             text += "\n";
         }
         console.log(text)
