@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Functions as Objects</h1>
+    <script>
+        // const person = {
+        //     fname: "Ali",
+        //     lname: "Ahmad",
+        //     details: function(){
+        //         return person.fname + " " + person.lname;
+        //     }
+        // }
+        // console.log(person.details())
+
+        function myFun(fname, lname, email){
+            this.firstName = fname;
+            this.lastName = lname;
+            this.email = email;
+            this.printDetails = function(){
+                return "My name is "+ this.firstName + " My last name "+  this.lastName + " and my email is "+ this.email;
+            }
+
+        }
+  
+        const student1= new myFun("Ahmad", "Bilal", "sample@gmail.com");
+        // console.log(obj1.email)
+        console.log(student1.printDetails())
+        // console.log(typeof obj1)
+
+        const student2 = new myFun("Akbar", "Akram","akbar@gmail.com");
+        console.log(student2.printDetails())
+
+
+
+    </script>
+</body>
+</html>
