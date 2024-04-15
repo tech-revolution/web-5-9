@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Functions : <span id="newId"></span></h1>
+    <button onclick="myClick()">Click</button>
+
+    <script>
+        // function myAddFun(...args){
+        //     let sum = 0;
+        //     for (let i of args) sum+=i;
+        //     return sum;
+        // }
+        // console.log(myAddFun(4,5,6,7,8,9));
+        // function* simpleGen(){
+        //     console.log("Hello Wolrd");
+        //     yield 1;
+
+        //     console.log("After One")
+        //     let x = 8
+        //     yield x;
+        //     console.log("After Two")
+        //     let a = 8;
+        //     let b = 5;
+        //     yield a+b;
+        // }
+
+        // let sG = simpleGen()
+        // console.log(sG.next())
+        // console.log(sG.next())
+        // console.log(sG.next())
+        // console.log(sG.next())
+
+        // function* myGen(){
+        //     let i = 0;
+        //     while(i<10){
+        //         i++;
+        //         yield i;
+        //     }
+        // }
+
+        // let mG = myGen();
+
+        // function myClick(){
+        //     document.getElementById('newId').innerText = mG.next().value
+        // }
+        // function myFun(){
+        //     return 1;
+        // }
+
+        // let myFun1 = function(){
+        //     return 1;
+        // }
+
+        // let myFun2=()=>{
+        //     return 1;
+        // }
+
+
+        // let arr = [23,34,45]
+        // arr.forEach(value, index, array)
+
+        // let newArr = arr.map(function(item){
+        //     return item*2
+        // })
+        // let newArr = arr.map((item)=>item*2)
+        // console.warn(newArr)
+        // let b = arr.map((item)=>{
+        //     console.log(item)
+        //     return item+2
+        // })
+        // console.log(b)
+
+        // let perosn = {
+        //     name:"Ali",
+        //     age:24,
+        //     getName: function(){
+        //         console.warn("Normal Function", this)
+        //     },
+        //     getNameArrow:()=>{
+        //         console.warn("Arrow Function", this)
+        //     }
+        // }
+
+
+        // perosn.getName();
+        // perosn.getNameArrow()
+
+        function myFun(name, age){
+            this.name = name;
+            this.age = age;
+            this.details = function (){
+                return this.name + " " + this.age
+            }
+        }
+        let obj1 = new myFun("Ali", 34);
+        let obj2 = new myFun("Bilal", 37);
+        console.log(obj2.details())
+        console.log(obj1.details())
+
+
+
+
+    </script>
+</body>
+</html>
