@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                Helvetica, Arial, sans-serif;
+            line-height: 21px;
+        }
+
+        form {
+            display: inline-block;
+            padding: 20px;
+            background-color: #f9f5e9;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+        }
+
+        #form-prompt {
+            font-weight: 700;
+            margin-top: -5px;
+            margin-bottom: 5px;
+        }
+
+        input:not([type="radio"]) {
+            margin-top: 10px;
+        }
+
+        input:hover,
+        label:hover {
+            cursor: pointer;
+        }
+
+        input[disabled] {
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <h1 class="head">Hello World</h1>
+    <h1 class="head">Hello World</h1>
+    <h1 class="head">Hello World</h1>
+    <h3>AddEventListners</h3>
+    <button id="btn">Click</button> -->
+    <form id="form" method="get">
+        <div id="form-prompt">Language</div>
+        <input type="radio" id="css" name="language" value="css">
+        <label for="css">CSS</label><br>
+        <input type="radio" id="html" name="language" value="html">
+        <label for="html">HTML</label><br>
+        <input type="radio" id="javascript" name="language" value="javascript">
+        <label for="javascript">JavaScript</label>
+
+        <div>
+            <input type="submit" disabled>
+            <input type="reset">
+        </div>
+    </form>
+
+    <script>
+        // let x = document.querySelector("#btn");
+        // let y = document.querySelectorAll(".head");
+        // x.addEventListener("click", abc)
+        // function abc(){
+        //     // alert("Hello")
+        //     // y[0].style.color = "red";
+        //     for(let i=0; i<y.length; i++){
+        //         y[i].style.color = "red";
+        //     }
+        // }
+        // document.querySelector("#btn").onmouseover = abc;
+        // function abc(){
+        //     alert("Hello Demo")
+        // }
+        // document.querySelector("#btn").addEventListener("click", function(){
+        //     alert("Hello")
+        // });
+
+        // Example 
+            document.querySelector("#form").addEventListener("submit", showMessage)
+
+            document.querySelector("[type='reset']").addEventListener("click", checker)
+            const x = document.querySelectorAll("[type='radio']")
+            x.forEach((x)=>{
+                x.addEventListener("click",checker)
+            })
+
+            function showMessage(){
+                alert("Your data is submited")
+            }
+
+            function checker(){
+                const btnsubmit = document.querySelector("[type='submit']");
+                if(this.checked == true){
+                    btnsubmit.removeAttribute("disabled");
+                }else{
+                    btnsubmit.setAttribute("disabled", "");
+                }
+            }
+
+
+    </script>
+
+</body>
+
+</html>
