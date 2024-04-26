@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            background-color: brown;
+        }
+
+        .animate {
+            width: 50px;
+            height: 50px;
+            background-color: yellowgreen;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>DOM</h1>
+    <p>Document Object Model</p>
+    <!-- <form action="" name="myform">
+        <label for="">Enter Value:</label><br><br>
+        <input type="text" name="fname"> <br><br>
+        <input id="btn" type="submit">
+    </form> -->
+    <button id="btn" onclick="myFun()">Click</button><br><br>
+    <div class="container">
+        <div class="animate"></div>
+    </div>
+
+    <!-- <script>
+        document.querySelector("#btn").addEventListener('click', function(){
+            let a = document.forms["myform"]["fname"].value;
+            if(a>10 || a<1 || isNaN(a)){
+                alert("Wrong Value")
+            }else{
+                alert("Value is OK")
+            }
+        });
+
+    </script> -->
+    <script>
+        function myFun(){
+            let sec = null;
+            let anime = document.querySelector("#animate");
+            let pos = 0;
+            clearInterval(sec)
+            sec = setInterval(frame, 10);
+            function frame() {
+                if (pos == 350) {
+                    clearInterval(sec);
+                } else {
+                    pos++;
+                    anime.style.top = pos + "px";
+                    anime.style.left = pos + "px";
+
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
