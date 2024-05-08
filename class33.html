@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Browser Object Model</h1>
+    <a href="class10.html">Temp Link</a>
+    <p id="test"></p>
+    <button id="back">Previous</button>
+    <button id="next" onclick="setTimeout(myFun, 4000)">Next</button>
+
+
+
+
+    <script>
+        // document.querySelector("#test").innerHTML = window.location.pathname
+
+        // document.querySelector("#back").addEventListener('click', function(){
+        //     window.history.back()
+        // })
+
+
+        // document.querySelector("#next").addEventListener('click', function(){
+        //     window.history.forward()
+        // })
+        // document.querySelector("#test").innerHTML = navigator.cookieEnabled
+        // document.querySelector("#test").innerHTML = navigator.userAgent
+        // function myFun(){
+        //     alert("Hello")
+        // }
+        setInterval(DigitalClock)
+        function DigitalClock(){
+            let x = new Date();
+            document.querySelector("#test").innerHTML = x.toLocaleTimeString();
+        }
+        
+    </script>
+</body>
+</html>

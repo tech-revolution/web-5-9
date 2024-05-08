@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .container {
+        #container {
             width: 400px;
             height: 400px;
             position: relative;
             background-color: brown;
         }
 
-        .animate {
+        #animate {
             width: 50px;
             height: 50px;
             background-color: yellowgreen;
@@ -31,8 +31,8 @@
         <input id="btn" type="submit">
     </form> -->
     <button id="btn" onclick="myFun()">Click</button><br><br>
-    <div class="container">
-        <div class="animate"></div>
+    <div id="container">
+        <div id="animate"></div>
     </div>
 
     <!-- <script>
@@ -49,17 +49,17 @@
     <script>
         function myFun(){
             let sec = null;
-            let anime = document.querySelector("#animate");
             let pos = 0;
+            let anim = document.querySelector("#animate");
             clearInterval(sec)
-            sec = setInterval(frame, 10);
-            function frame() {
+            sec = setInterval(sample, 5);
+            function sample() {
                 if (pos == 350) {
                     clearInterval(sec);
                 } else {
                     pos++;
-                    anime.style.top = pos + "px";
-                    anime.style.left = pos + "px";
+                    anim.style.top = pos + "px";
+                    anim.style.left = pos + "px";
 
                 }
             }

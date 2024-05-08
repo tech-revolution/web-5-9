@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie</title>
+    <style>
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: max-content;
+
+        }
+
+        .card {
+            border-radius: 5px;
+            /* border: 1px solid; */
+            text-align: center;
+            margin: 5px;
+            display: inline-block;
+            box-shadow: 0 0 20px;
+            width: max-content;
+        }
+
+        .card img {
+            width: 300px;
+            padding: 5px;
+        }
+
+        .title {
+            font-weight: bold;
+            margin: 20px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        button {
+            border: 2px solid;
+            background: #f7a440;
+            color: white;
+            cursor: pointer;
+            margin: 20px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            box-shadow: 0 0 20px #cf8934 inset;
+        }
+
+        select {
+            width: 70px;
+        }
+
+        .cart {
+            width: 250px;
+            float: right;
+            height: 100%;
+            overflow-y: scroll;
+            /* box-shadow: 0 0 20px #cf8934; */
+            text-align: center;
+        }
+
+        .cartimg>img {
+            width: 130px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <h1>Cookie</h1>
+    <h1>Local Storage</h1>
+    <h1>Sessions Storage</h1> -->
+    <div class="container">
+        <div class="card" id="item1">
+            <img src="shoe.png" alt="Product">
+            <h1>Product Title</h1>
+            <div>
+                <label>Size</label>
+                <select>
+                    <option>39</option>
+                    <option>40</option>
+                    <option>41</option>
+                </select>
+            </div>
+            <button onclick="addToCart(item1)">Add To Cart</button>
+        </div>
+    </div>
+
+    <div class="cart" id="cart">
+        <div class="title">Cart Items</div>
+        <hr>
+        <div class="title"></div>
+    </div>
+
+    <!-- <script>
+        // alert(document.cookie)
+        // document.cookie = "FirstName=Bilal"
+        // document.cookie = "LastName=Ali; expires=Tue, 30 April 2024, 18:34:00 UTC";
+        // localStorage.setItem('Firstname', "Ali")
+        // localStorage.setItem('Lastname', "Ali")
+        // localStorage.removeItem("L")
+        // console.log(localStorage.getItem("Firstname"))
+
+        sessionStorage.setItem("Location", "Lahore")
+        console.log(sessionStorage.getItem("Location"))
+    </script> -->
+    <script>
+        let addItemId = 0;
+        function addToCart(item) {
+            addItemId += 1;
+            let selectedItem = document.createElement('div');
+            selectedItem.classList.add('cartimg');
+            selectedItem.setAttribute('id', addItemId)
+            let img = document.createElement('img');
+            img.setAttribute('src', item.children[0].currentSrc);
+            // let title = document.createElement('div');
+            // title.innerHTML = item.children[1].innerText;
+            // let select = document.createElement('span');
+            // select.innerHTML = item.children[0].children[0].value;
+            // label.append(select);
+
+
+        }
+    </script>
+</body>
+
+</html>
